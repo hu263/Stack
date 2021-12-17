@@ -7,6 +7,7 @@ protected:
     unsigned int count;
 
     Container ();
+    virtual ~Container();
 
 public:
     virtual unsigned int Count () const;

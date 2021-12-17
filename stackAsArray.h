@@ -1,17 +1,17 @@
-#ifndef stackaslinkedlist_h
-#define stackaslinkedlist_h
+#ifndef stackasarray_h
+#define stackasarray_h
 
 #include "rainfall.h"
 #include "stack.h"
 
-#include "linkedlist.h"
-#include "linkedlist.cpp"
+#include "array.h"
+#include "array.cpp"
 
 class Rainfall;
 
-class StackAsLinkedList final: public Stack
+class StackAsArray final : public Stack
 {
-    LinkedList<Rainfall*> list;
+    Array<Rainfall*> array;
 
     /** The inplementing function in the derived class 
      * Purge() deletes the elements in the container
@@ -20,15 +20,15 @@ class StackAsLinkedList final: public Stack
 
 public:
     /* Constructor and Destructor */
-    StackAsLinkedList();
-    virtual ~StackAsLinkedList();
+    StackAsArray(unsigned int size);
+    ~StackAsArray();
     
     /** Inplementing functions in the derived class
      * Top func returns the top object of the Stack.
      * Push func pushes Rainfall object into the Stack.
      * Pop func pops Rainfall object out of the Stack.
      */
-    Rainfall& Top () const override ;
+    Rainfall& Top () const override;
     void Push (Rainfall&) override;
     void Pop () override;
 };

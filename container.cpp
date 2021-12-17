@@ -5,6 +5,9 @@ Container::Container () :
     count (0)
     {}
 
+Container::~Container ()
+    {count = 0;}
+
 unsigned int Container::Count () const
     { return count; }
 
